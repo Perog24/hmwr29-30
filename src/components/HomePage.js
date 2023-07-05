@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useNavigate } from 'react-router';
 import {useDispatch } from 'react-redux';
-import { getUsersAsync, getPostsAsync, getCommentsAsync } from '../store/actions/users.actions'
+import { getUsers, getPosts, getComments} from '../store/slices/api.slice'
 import {Counter} from './Counter'
 
 export const HomePage = () => {
@@ -9,16 +9,16 @@ export const HomePage = () => {
    const dispatch = useDispatch();
 
    function handleUsers(){
-      dispatch(getUsersAsync());
+      dispatch(getUsers());
       navigate('/users')
    };
    function handlePosts(){
-      dispatch(getPostsAsync());
+      dispatch(getPosts());
       navigate('/posts')
    };
    
    function handleComments(){
-      dispatch(getCommentsAsync());
+      dispatch(getComments());
       navigate('/comments')
    };
 

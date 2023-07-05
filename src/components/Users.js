@@ -2,6 +2,7 @@ import { useSelector} from 'react-redux';
 
 const Users = () => {
    const users = useSelector(state=>state.api.users);   
+
    return (
     <div>
       {(users.length !== 0) && (
