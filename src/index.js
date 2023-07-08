@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import {Provider} from 'react-redux';
-
 import App from './App';
 import Users from './components/Users';
 import Posts  from './components/Posts';
 import Comments from './components/Сomments';
 import { HomePage } from './components/HomePage';
+import ErrorPage from './components/ErrorPage'
 import './index.css';
 
 const router = createBrowserRouter([
@@ -32,7 +31,8 @@ const router = createBrowserRouter([
         path: 'comments',
         lazy: () => import('./components/Сomments').then(()=>({element: <Comments />}))
       }
-    ]
+    ],
+    errorElement: <ErrorPage/>
   }
 
 ])

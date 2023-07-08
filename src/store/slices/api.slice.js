@@ -20,7 +20,6 @@ export const {getAsyncUsers, getAsyncPosts, getAsyncComments} = ipiSlice.actions
 export const getUsers = () => dispatch => {
    getDataApi("https://jsonplaceholder.typicode.com/users")
    .then(data => {
-      console.log('Data:', data);
       return dispatch(getAsyncUsers(data));
       })
 }
@@ -28,7 +27,6 @@ export const getUsers = () => dispatch => {
 export const getPosts = () => dispatch => {
    getDataApi("https://jsonplaceholder.typicode.com/posts")
    .then(data => {
-      console.log('Data:', data);
       return dispatch(getAsyncPosts(data));
       })
 }
@@ -36,7 +34,6 @@ export const getPosts = () => dispatch => {
 export const getComments = () => dispatch => {
    getDataApi("https://jsonplaceholder.typicode.com/comments")
    .then(data => {
-      console.log('Data:', data);
       return dispatch(getAsyncComments(data));
       })
 }

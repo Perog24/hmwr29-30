@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useNavigate } from 'react-router';
 import {useDispatch } from 'react-redux';
-import { getUsers, getPosts, getComments} from '../store/slices/api.slice'
+import { getUsers, getPosts, getComments} from '../store/slices/api.slice';
 import {Counter} from './Counter'
 
 export const HomePage = () => {
@@ -27,9 +27,9 @@ export const HomePage = () => {
          <h3>Home page</h3>
          <Counter />
          <hr/>
-         <button onClick = {handleUsers}>Users</button>
-         <button onClick = {handlePosts}>Posts</button>
-         <button onClick = {handleComments}>Comments</button>
+         <button data-testid="users" onClick = {handleUsers}>Users</button>
+         <button data-testid="posts" onClick = {handlePosts}>Posts</button>
+         <button data-testid="comments" onClick = {handleComments}>Comments</button>
       </Fragment>
    )
 }

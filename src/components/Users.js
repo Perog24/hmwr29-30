@@ -5,6 +5,7 @@ const Users = () => {
 
    return (
     <div>
+      <h3>Users:</h3>
       {(users.length !== 0) && (
       <ol>
         {users.map((user, index) => (<li key={index}>{user.name}</li> ))}
